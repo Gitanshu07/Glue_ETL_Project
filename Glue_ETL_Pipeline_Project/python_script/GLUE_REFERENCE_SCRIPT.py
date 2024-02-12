@@ -10,7 +10,7 @@ source_dyf = glueContext.create_dynamic_frame.from_catalog(
 # Define your mapping list with the new column
 mapping = [
     ("old_column_name", "string", "new_column_name", "int"),  # Existing mapping
-    ("", "int", "new_column_name_2", "string")  # New column mapping
+    ("old_column_name_2", "int", "new_column_name_2", "string")  # New column mapping
     # (source_column, source_type, target_column, target_type)
 ]
 
