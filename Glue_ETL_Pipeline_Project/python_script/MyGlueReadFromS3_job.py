@@ -85,7 +85,7 @@ spark_data_frame_filter.createOrReplaceTempView("product_view")
 
 logger.info('create dataframe by spark sql ')
 
-product_sql_df = spark.sql("SELECT new_year,count(new_customer_id) as cnt,sum(new_quantity) as qty FROM product_view group by new_year ")
+product_sql_df = spark.sql("SELECT new_year,count(new_customer_id) as count_id, sum(new_quantity) as Total_Quantity FROM product_view group by new_year ")
 
 logger.info('display records after aggregate result')
 product_sql_df.show()
